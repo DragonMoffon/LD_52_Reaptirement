@@ -193,7 +193,6 @@ class Slam(AttackAnimation):
         self._complete = False
 
     def _make_attack(self):
-        print(self._target)
         _attack = Attack(
             self.c_attack_data,
             self._target,

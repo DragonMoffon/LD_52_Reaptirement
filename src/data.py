@@ -468,7 +468,6 @@ class _PlayerUniversalData:
         if self.invulnerable:
             return
 
-        print(type(attack))
 
         _damage = 1 + int(SaveData.number_of_kills * attack.damage_mod / 2)
 
@@ -476,7 +475,6 @@ class _PlayerUniversalData:
         _dy = (PlayerData.raw_y - attack.hitbox.center_y)
         _dist = attack.knockback / ((_dx ** 2 + _dy ** 2) ** 0.5)
         self.knockback = (_dx * _dist, _dy * _dist)
-        print(self.knockback)
 
         if self.current_health == self.max_health:
             _damage = min(_damage, self.max_health - 1)

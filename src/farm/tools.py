@@ -182,9 +182,7 @@ class SeedlingBag(Tool):
         pass
 
     def left_release(self):
-        print(self.c_pointer.position)
         _planted = WindowData.game_view.try_plant(self.c_pointer, self._equipment)
-        print(_planted)
         if _planted:
             PlayerData.tool_belt.remove_tool(self)
 

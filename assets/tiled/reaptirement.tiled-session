@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "farm/Farm.tmx",
+    "activeFile": "crypts/Arena.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -42,8 +42,8 @@
             "scale": 1.6572222222222222,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 376.23198122695277,
-                "y": 360.2413677505867
+                "x": 346.6644317800871,
+                "y": 365.0687227623198
             }
         },
         "crypts/CryptTileset.tsx": {
@@ -118,7 +118,8 @@
         },
         "farm/OutsideTileset.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "farm/rules.tmx": {
             "scale": 1.5,
@@ -166,26 +167,27 @@
     "map.tileWidth": 16,
     "map.width": 30,
     "openFiles": [
-        "crypts/rules.tmx",
+        "Decorations.tsx",
         "farm/Farm.tmx",
-        "crypts/store.tmx",
-        "crypts/arena.tmx",
-        "Decorations.tsx"
+        "crypts/Arena.tmx",
+        "crypts/Store.tmx",
+        "farm/OutsideTileset.tsx",
+        "farm/rules.tmx"
     ],
     "project": "reaptirement.tiled-project",
     "recentFiles": [
+        "Decorations.tsx",
+        "farm/Farm.tmx",
+        "farm/rules.tmx",
+        "farm/OutsideTileset.tsx",
+        "crypts/Store.tmx",
+        "crypts/Arena.tmx",
         "crypts/rules.tmx",
         "crypts/store.tmx",
         "crypts/arena.tmx",
-        "Decorations.tsx",
-        "farm/Farm.tmx",
         "farm/GroundTiles.tsx",
         "test.tmx",
-        "GrassyTileset.tsx",
-        "crypts/CryptTileset.tsx",
-        "wireframe2d.tsx",
-        "rules.tmx",
-        "C:/Users/Playtech/Downloads/rules.tmx"
+        "GrassyTileset.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

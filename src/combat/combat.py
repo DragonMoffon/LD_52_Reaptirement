@@ -72,7 +72,6 @@ class CombatManager:
 
                 p_attack.struck = True
 
-        print(self._enemy_hitbox)
         if self._enemy_hitbox is not None and self._enemy_hitbox.collides_with_sprite(PlayerData.hitbox):
             PlayerData.hit(Attack(self.c_boss_body, (0, 0), 0, self._enemy_hitbox, None))
 

@@ -576,7 +576,6 @@ class CatchCoin(AttackAnimation):
         _t = Clock.length(self._start_time) / self._speed
 
         if _t >= 1.0:
-            print(self.do_attacks)
             self._attack()
             self._coin.kill()
             PlayerData.invulnerable = False
