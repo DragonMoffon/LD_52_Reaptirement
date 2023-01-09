@@ -37,14 +37,20 @@ class Weapon:
     def raw_y(self):
         return self._raw_position[1]
 
+    @property
+    def can_attack(self):
+        return self._current_attack is not None
+
     def stop_attack(self):
         self._stopping_attack = Clock.time
 
     def hide_weapon(self):
-        return self._sprite.remove_from_sprite_lists()
+        self._sprite.remove_from_sprite_lists()
 
     def show_weapon(self):
-        return self._parent_sprite_list.append(self._sprite)
+        if self._sprite in self._parent_sprite_list:
+            return
+        self._parent_sprite_list.append(self._sprite)
 
     def update(self):
         pass

@@ -3,21 +3,20 @@ from math import radians, cos, sin
 
 from arcade import Sprite
 
-if False:
-    from src.combat.combat import CombatManager
-
 from src.clock import Clock
 
 
 class AttackData(NamedTuple):
-    damage: float
+    damage_mod: float
     knockback: float
 
     duration: float
 
     start_velocity: float
-    angle_velocity: float = 0.0
+    direction_velocity: float = 0.0
     acceleration: float = 0.0
+    angle_velocity: float = 0.0
+    scale_velocity: float = 0.0
 
     wall_killed: bool = True
 
@@ -50,15 +49,10 @@ class AttackAnimation:
 
 
 class Attack:
-    combat_manager: "CombatManager" = None
-
-    @staticmethod
-    def set_manager(_manager: "CombatManager"):
-        Attack.combat_manager = _manager
 
     def __init__(self, data: AttackData, start_pos: Tuple[float, float], start_direction: float,
                  hitbox: Sprite, attack_sprite: Sprite):
-        self._damage: float = data.damage
+        self._damage_mod: float = data.damage_mod
         self._knockback: float = data.knockback
 
         self._hitbox: Sprite = hitbox
@@ -71,8 +65,14 @@ class Attack:
 
         self._direction: float = start_direction
         self._velocity: float = data.start_velocity
-        self._angle_velocity: float = data.angle_velocity
+        self._direction_velocity: float = data.angle_velocity
         self._acceleration: float = data.acceleration
+
+        self._angle: float = 0.0
+        self._angle_velocity: float = data.angle_velocity
+
+        self._scale: float = 1.0
+        self._scale_velocity = data.scale_velocity
 
         self._wall_killed: bool = data.wall_killed
 
@@ -82,8 +82,10 @@ class Attack:
         self.struck: bool = False
 
     def update(self):
-        self._direction += self._angle_velocity * Clock.delta_time
+        self._direction += self._direction_velocity * Clock.delta_time
         self._velocity += self._acceleration * Clock.delta_time
+        self._angle += self._angle_velocity * Clock.delta_time
+        self._scale += self._scale_velocity * Clock.delta_time
 
         _r = radians(self._direction)
         _dx, _dy = cos(_r) * self._velocity, sin(_r) * self._velocity
@@ -93,7 +95,10 @@ class Attack:
 
         self._hitbox.position = _x, _y
         self._attack_sprite.position = int(_x), int(_y)
-        self._attack_sprite.angle = self._direction
+        self._attack_sprite.angle = self._direction + self._angle
+
+        self._hitbox.scale = self._scale
+        self._attack_sprite.scale = self._scale
 
     def age(self):
         return Clock.length(self._spawn_time) / self._duration
@@ -113,8 +118,8 @@ class Attack:
         return self._hitbox
 
     @property
-    def damage(self):
-        return self._damage
+    def damage_mod(self):
+        return self._damage_mod
 
     @property
     def knockback(self):
@@ -127,3 +132,7 @@ class Attack:
     @property
     def direction(self):
         return self._direction
+
+    @property
+    def wall_killed(self):
+        return self._wall_killed

@@ -8,7 +8,7 @@ class _Clock:
 
         self._tick_time: float = 0.0
         self._raw_time: float = 0.0
-        self._frame_time: int = 0
+        self._frame_time: int = 0.0
 
     def tick(self, delta_time: float):
         self._delta_tick = delta_time * self._tick_speed
@@ -16,6 +16,8 @@ class _Clock:
 
         self._tick_time += self._delta_tick
         self._raw_time += self._delta_time
+
+        self._frame_time += 1
 
     def frame_tick(self):
         self._frame_time += 1

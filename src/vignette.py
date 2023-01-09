@@ -14,14 +14,14 @@ class Vignette(Sprite):
     def __init__(self):
         super().__init__(":assets:/textures/vignette.png")
         self.position = WindowData.down_scale_resolution[0]//2, WindowData.down_scale_resolution[1]//2
-        self.visible = False
+        self.hide_vignette()
 
-    def show_vignette(self, colour: Tuple[float, float, float, float]):
-        self.color = colour[0] * 255, colour[1] * 255, colour[2] * 255
-        self.alpha = colour[-1] * 255 * 0.1
+    def show_vignette(self, colour: Tuple[int, int, int]):
+        self.color = colour
+        self.alpha = 25
         self.visible = True
 
     def hide_vignette(self):
         self.color = 0, 0, 0
-        self.alpha = 0
-        self.visible = False
+        self.alpha = 2
+        self.visible = True

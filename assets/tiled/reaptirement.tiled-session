@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "farm.tmx",
+    "activeFile": "farm/Farm.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -28,8 +28,67 @@
         "C:/Users/Playtech/TileSheets/wireframe2d.tsx": {
             "scaleInDock": 1
         },
+        "Decorations.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "GrassyTileset.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "crypts/Arena.tmx": {
+            "scale": 1.6572222222222222,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 376.23198122695277,
+                "y": 360.2413677505867
+            }
+        },
+        "crypts/CryptTileset.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "crypts/GrassyTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "crypts/Store.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 211,
+                "y": 227.99999999999994
+            }
+        },
+        "crypts/arena.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 265.66666666666663,
+                "y": 326.66666666666663
+            }
+        },
+        "crypts/rules.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 384,
+                "y": 1023.9090909090909
+            }
+        },
+        "crypts/store.tmx": {
+            "scale": 2,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 432.25,
+                "y": 210
+            }
+        },
+        "crypts/wireframe2d.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
         },
         "decorations.tsx": {
             "dynamicWrapping": true,
@@ -44,6 +103,35 @@
                 "y": 135.5
             }
         },
+        "farm/Farm.tmx": {
+            "scale": 3,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 257.8333333333333,
+                "y": 250.33333333333331
+            }
+        },
+        "farm/GroundTiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "farm/OutsideTileset.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "farm/rules.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 329.66666666666663,
+                "y": 302.66666666666663
+            }
+        },
+        "farm/wireframe.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
         "grassy_tiles.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 8,
@@ -51,7 +139,7 @@
         },
         "rules.tmx": {
             "scale": 3,
-            "selectedLayer": 1,
+            "selectedLayer": 0,
             "viewCenter": {
                 "x": 491.5,
                 "y": 495.66666666666663
@@ -61,33 +149,48 @@
             "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 429.66666666666663,
-                "y": 294
+                "x": 444.3333333333333,
+                "y": 342.66666666666663
             }
+        },
+        "wireframe2d.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
-    "last.externalTilesetPath": "C:/Users/Playtech/Desktop/Code/Game Jams/LD_52_Reaptirement/assets/tiled",
-    "last.imagePath": "C:/Users/Playtech/Desktop/Code/Game Jams/LD_52_Reaptirement/assets/textures/tiles",
-    "map.height": 17,
+    "last.externalTilesetPath": "C:/Users/Playtech/Desktop/Code/Game Jams/LD_52_Reaptirement/assets/tiled/farm",
+    "last.imagePath": "C:/Users/Playtech/Desktop/Code/Game Jams/LD_52_Reaptirement/assets/textures/UI",
+    "map.height": 25,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
+    "map.width": 30,
     "openFiles": [
-        "farm.tmx",
-        "grassy_tiles.tsx",
-        "decorations.tsx"
+        "crypts/rules.tmx",
+        "farm/Farm.tmx",
+        "crypts/store.tmx",
+        "crypts/arena.tmx",
+        "Decorations.tsx"
     ],
     "project": "reaptirement.tiled-project",
     "recentFiles": [
-        "C:/Users/Playtech/Downloads/rules.tmx",
+        "crypts/rules.tmx",
+        "crypts/store.tmx",
+        "crypts/arena.tmx",
+        "Decorations.tsx",
+        "farm/Farm.tmx",
+        "farm/GroundTiles.tsx",
+        "test.tmx",
+        "GrassyTileset.tsx",
+        "crypts/CryptTileset.tsx",
+        "wireframe2d.tsx",
         "rules.tmx",
-        "farm.tmx",
-        "grassy_tiles.tsx",
-        "decorations.tsx"
+        "C:/Users/Playtech/Downloads/rules.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
         "height": 16,
         "width": 16
-    }
+    },
+    "tileset.type": 0
 }
